@@ -1,4 +1,4 @@
-#!/bin/shell
+#!/bin/bash
 #Variabelen
 sa = "sudo apt"
 
