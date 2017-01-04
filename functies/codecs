@@ -7,7 +7,7 @@ function codecs {
     NAME="Multimedia Codecs"
     # Check if already installed
     show_info 'Comtroleer of het pakket al aanwezig is..'
-    PKGCHECK=$(dpkg-query -W --showformat='${Status}\n' $PACKAGE|grep "install ok installed")
+    PKGCHECK=$(dpkg-query -W --showformat='${Status}\n' $PACKAGE|grep "installatie oké geinstalleerd")
     if [ "" == "$PKGCHECK" ]; then
         show_info $NAME 'Pakket is niet geinstalleerd. Doorgaan'
         if (whiptail --title "Multimedia Codecs" --yesno "Installeer Ubuntu Multimedia Extras voor mhet afspelen van multimedia?" 10 60) then
