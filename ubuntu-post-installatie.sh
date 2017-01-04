@@ -28,14 +28,13 @@ clear
 
 dir="$(dirname "$0")"
 
-. $dir/functies/check
-. $dir/functies/cleanup
+. $dir/functies/controleer
+. $dir/functies/opschonen
 . $dir/functies/codecs
-. $dir/functies/configure
-. $dir/functies/development
-. $dir/functies/favs
-. $dir/functies/gnome
-. $dir/functies/thirdparty
+. $dir/functies/configureren
+. $dir/functies/ontwikkeling
+. $dir/functies/favorieten
+. $dir/functies/derdeparty
 . $dir/functies/update
 . $dir/functies/utilities
 
@@ -91,9 +90,9 @@ function main {
 
 # Quit
 function quit {
-    if (whiptail --title "Quit" --yesno "Are you sure you want quit?" 10 60) then
-        echo "Exiting..."
-        show_info 'Thanks for using!'
+    if (whiptail --title "Afsluiten" --yesno "Weet u het zeker dat u wilt afsluiten?" 10 60) then
+        echo "Afsluiten..."
+        show_info 'Bedankt voor het gebruik!'
         exit 99
     else
         main
