@@ -2,8 +2,7 @@
 # -*- Mode: sh; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #
 # Authors:
-#   Richard van der Heijden <richard@hcsroosendaal.nl>
-#
+#   Richard van der Heijden <doomofthecracks@gmail.com>
 # Description:
 #   A post-installation bash script for Ubuntu
 #
