@@ -1,2 +1,2 @@
 # Debian
-Shell scipten voor Debian linux
+Shell scripts voor Debian linux
