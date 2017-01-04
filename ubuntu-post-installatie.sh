@@ -74,10 +74,9 @@ function main {
         update      'Voer een system update uit' \
         favs        'Installeer voorkeur applicaties' \
         utilities   'Installeer voorkeur systeem hulpprogrammas' \
-        development 'Installeer voorkeur programmeer gereedschap' \
+        ontwikkeling 'Installeer voorkeur programmeer gereedschap' \
         codecs      'Installeer Ubuntu beperkte Extras' \
-        thirdparty  'Installeer derde-partij software' \
-        gnome       'Installeer laatste GNOME software' \
+        derdeparty  'Installeer derde-partij software' \
         configure   'Configureer systeem' \
         cleanup     'Maak het systeem schoon' \
         3>&1 1>&2 2>&3)
