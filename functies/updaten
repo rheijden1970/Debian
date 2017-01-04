@@ -5,7 +5,7 @@ function update {
 if (whiptail --title "Systeem Update" --yesno "Doorgaan met de systeem update?" 10 60) then
     # Update repository information
     show_info 'Updaten van repository informatie...'
-    show_warning 'Heeft root privileges nodig'
+    show_warning 'Vereist root rechten'
     sudo apt-get update
     show_success 'Voltooid.'
     # Dist-Upgrade
