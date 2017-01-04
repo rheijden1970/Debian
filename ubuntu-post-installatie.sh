@@ -29,16 +29,16 @@ clear
 
 dir="$(dirname "$0")"
 
-. $dir/functions/check
-. $dir/functions/cleanup
-. $dir/functions/codecs
-. $dir/functions/configure
-. $dir/functions/development
-. $dir/functions/favs
-. $dir/functions/gnome
-. $dir/functions/thirdparty
-. $dir/functions/update
-. $dir/functions/utilities
+. $dir/functies/check
+. $dir/functies/cleanup
+. $dir/functies/codecs
+. $dir/functies/configure
+. $dir/functies/development
+. $dir/functies/favs
+. $dir/functies/gnome
+. $dir/functies/thirdparty
+. $dir/functies/update
+. $dir/functies/utilities
 
 #----- Fancy Messages -----#
 show_error(){
