@@ -2,7 +2,7 @@
 # -*- Mode: sh; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #
 # Authors:
-#   Sam Hewitt <sam@snwh.org>
+#   Richard van der Heijden <richard@hcsroosendaal.nl>
 #
 # Description:
 #   A post-installation bash script for Ubuntu
@@ -68,19 +68,19 @@ function main {
     eval `resize`
     MAIN=$(whiptail \
         --notags \
-        --title "Ubuntu Post-Install Script" \
-        --menu "\nWhat would you like to do?" \
-        --cancel-button "Quit" \
+        --title "Ubuntu Post-Installatie script" \
+        --menu "\nWat wil je gaan doen?" \
+        --cancel-button "Verlaten" \
         $LINES $COLUMNS $(( $LINES - 12 )) \
-        update      'Perform system update' \
-        favs        'Install preferred applications' \
-        utilities   'Install preferred system utilities' \
-        development 'Install preferred development tools' \
-        codecs      'Install Ubuntu Restricted Extras' \
-        thirdparty  'Install third-party applications' \
-        gnome       'Install latest GNOME software' \
-        configure   'Configure system' \
-        cleanup     'Cleanup the system' \
+        update      'Voer een system update uit' \
+        favs        'Installeer voorkeur applicaties' \
+        utilities   'Installeer voorkeur systeem hulpprogrammas' \
+        development 'Installeer voorkeur programmeer gereedschap' \
+        codecs      'Installeer Ubuntu beperkte Extras' \
+        thirdparty  'Installeer derde-partij software' \
+        gnome       'Installeer laatste GNOME software' \
+        configure   'Configureer systeem' \
+        cleanup     'Maak het systeem schoon' \
         3>&1 1>&2 2>&3)
      
     exitstatus=$?
