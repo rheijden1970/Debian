@@ -6,14 +6,14 @@ function codecs {
     PACKAGE=ubuntu-restricted-extras
     NAME="Multimedia Codecs"
     # Check if already installed
-    show_info 'Checking if already installed...'
+    show_info 'Comtroleer of het pakket al aanwezig is..'
     PKGCHECK=$(dpkg-query -W --showformat='${Status}\n' $PACKAGE|grep "install ok installed")
     if [ "" == "$PKGCHECK" ]; then
-        show_info $NAME 'is not installed. Proceeding'
-        if (whiptail --title "Multimedia Codecs" --yesno "Install Ubuntu Restricted Extras for multimedia playback?" 10 60) then
+        show_info $NAME 'Pakket is niet geinstalleerd. Doorgaan'
+        if (whiptail --title "Multimedia Codecs" --yesno "Installeer Ubuntu Multimedia Extras voor mhet afspelen van multimedia?" 10 60) then
             # Install
-            show_info 'Installing...'
-            show_warning 'Requires root privileges'
+            show_info 'Installeren...'
+            show_warning 'Vereist root rechten'
             sudo apt-get install -y ubuntu-restricted-extras
             # Klaar
             show_success 'Klaar.'
@@ -22,8 +22,8 @@ function codecs {
         fi
     else
         # Is al geinstalleerd
-        show_success 'Already installed.'
-        whiptail --title "Finished" --msgbox "$NAME are installed." 8 78
+        show_success 'Pakket is al geinstalleerd.'
+        whiptail --title "Voltooid" --msgbox "$NAME zijn geinstalleerd." 8 78
         main
     fi
 }
