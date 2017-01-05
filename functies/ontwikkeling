@@ -2,7 +2,7 @@
 
 dir="$(dirname "$0")"
 
-DEVTOOLS="$dir/data/development.list"
+DEVTOOLS="$dir/data/ontwikkeling.list"
 
 # Install preferred development applications using the list of packages 'data/development.list'
 function development {
@@ -12,7 +12,7 @@ function development {
         $LINES $COLUMNS $(( $LINES - 12 )) \
         --scrolltext) then
         show_info 'Installeren...'
-        show_warning 'Vereits root rechten'
+        show_warning 'Vereist root rechten'
         sudo apt-get install -y $(cat $DEVTOOLS)
         # Done
         show_success 'Klaar.'
@@ -21,10 +21,10 @@ function development {
         if [[ $EXITSTATUS != 0 ]]; then
             # Already installed
             show_success 'Is al geinstalleerd.'
-            whiptail --title "Finished" --msgbox "Your preferred development tools are installed." 8 78
+            whiptail --title "Voltooid" --msgbox "Uw voorkeur ontwikkelings programma's zijn geinstalleerd." 8 78
             main
         else
-            whiptail --title "Finished" --msgbox "Installation complete." 8 78
+            whiptail --title "Voltooid" --msgbox "Installatie compleet." 8 78
             main
         fi
     else
