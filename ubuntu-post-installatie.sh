@@ -36,7 +36,7 @@ dir="$(dirname "$0")"
 . $dir/functies/favorieten
 . $dir/functies/derdeparty
 . $dir/functies/update
-. $dir/functies/utilities
+. $dir/functies/utilities   
 
 #----- Fancy Messages -----#
 show_error(){
@@ -70,14 +70,14 @@ function main {
         --menu "\nWat wil je gaan doen?" \
         --cancel-button "Verlaten" \
         $LINES $COLUMNS $(( $LINES - 12 )) \
-        update      'Voer een systeem update uit' \
-        favs        'Installeer voorkeur applicaties' \
-        utilities   'Installeer voorkeur systeem hulpprogramma's' \
-        ontwikkeling 'Installeer voorkeur programmeer gereedschap' \
-        codecs      'Installeer Ubuntu beperkte Extras' \
-        derdeparty  'Installeer derde-partij software' \
-        configure   'Configureer systeem' \
-        cleanup     'Maak het systeem schoon' \
+        update          'Voer een systeem update uit' \
+        favs            'Installeer voorkeur applicaties' \
+        utilities       'Installeer voorkeur systeem hulpprogramma's' \
+        ontwikkeling    'Installeer voorkeur programmeer gereedschap' \
+        codecs          'Installeer Ubuntu beperkte Extras' \
+        derdeparty      'Installeer derde-partij software' \
+        configure       'Configureer systeem' \
+        cleanup         'Maak het systeem schoon' \
         3>&1 1>&2 2>&3)
      
     exitstatus=$?
