@@ -70,9 +70,9 @@ function main {
         --menu "\nWat wil je gaan doen?" \
         --cancel-button "Verlaten" \
         $LINES $COLUMNS $(( $LINES - 12 )) \
-        update      'Voer een system update uit' \
+        update      'Voer een systeem update uit' \
         favs        'Installeer voorkeur applicaties' \
-        utilities   'Installeer voorkeur systeem hulpprogrammas' \
+        utilities   'Installeer voorkeur systeem hulpprogramma's' \
         ontwikkeling 'Installeer voorkeur programmeer gereedschap' \
         codecs      'Installeer Ubuntu beperkte Extras' \
         derdeparty  'Installeer derde-partij software' \
