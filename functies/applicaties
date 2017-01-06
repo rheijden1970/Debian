@@ -2,7 +2,7 @@
 
 dir="$(dirname "$0")"
 
-UTILS="$dir/data/applicaties.list"
+UTILS="$dir/data/applicaties.lijst"
 
 # Install preferred utilities using the list of packages 'data/utilities.list'
 function utilities {
