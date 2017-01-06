@@ -7,7 +7,7 @@ PURGED="$dir/data/purge.list"
 # Remove unused/unwanted packages that are listed in 'data/purge.list'
 function unused {
     if (eval `resize` && whiptail \
-        --title "Remove Un-used Pre-installed Applications" \
+        --title "Verwijderen van ongebruikte voor geinstalleerde Applicaties" \
         --yesno "Current list of pre-installed applications to remove: \n\n$(cat $PURGED) \n\nAre you sure you want proceed?" \
         $LINES $COLUMNS $(( $LINES - 12 )) \
         --scrolltext ) then
