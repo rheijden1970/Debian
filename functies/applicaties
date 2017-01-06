@@ -2,18 +2,18 @@
 
 dir="$(dirname "$0")"
 
-UTILS="$dir/data/applicaties.lijst"
+APPL="$dir/data/applicaties.lijst"
 
 # Install preferred utilities using the list of packages 'data/utilities.list'
 function utilities {
     if (eval `resize` && whiptail --title \
         "Voorkeur Systeem applicaties"  --yesno \
-        "Huidige lijst met Voorkeur systeem applicaties: \n\n$(cat $UTILS) \n\nDoor gaan met installatie?" \
+        "Huidige lijst met Voorkeur systeem applicaties: \n\n$(cat $APPL) \n\nDoor gaan met installatie?" \
         $LINES $COLUMNS $(( $LINES - 12 )) \
         --scrolltext ) then
         show_info 'Installeren...'
-        show_warning 'Vereist adminstrator rechten'
-        sudo apt-get install -y --no-install-recommends $(cat $UTILS)
+        show_warning 'Vereist administrator rechten'
+        sudo apt-get install -y --no-install-recommends $(cat $APPL)
         # Done
         show_success 'Voltooid.'
         # Check
