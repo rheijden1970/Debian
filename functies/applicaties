@@ -4,7 +4,7 @@ dir="$(dirname "$0")"
 
 APPL="$dir/data/applicaties.lijst"
 
-# Install preferred utilities using the list of packages 'data/utilities.list'
+# Install preferred utilities using the list of packages 'data/applicaties.lijst'
 function utilities {
     if (eval `resize` && whiptail --title \
         "Voorkeur Systeem applicaties"  --yesno \
