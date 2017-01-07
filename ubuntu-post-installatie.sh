@@ -20,11 +20,10 @@
 # You should have received a copy of the GNU General Public License along with
 # this program; if not, see <https://www.gnu.org/licenses/gpl-3.0.txt>
 
-# tab width
-tabs 4
+# tab breedte
 clear
 
-#----- Import Functions -----#
+#----- Importeer Functies -----#
 
 dir="$(dirname "$0")"
 
@@ -35,7 +34,7 @@ dir="$(dirname "$0")"
 . $dir/functies/ontwikkeling
 . $dir/functies/favorieten
 . $dir/functies/derdeparty
-. $dir/functies/update
+. $dir/functies/opwaarderen
 . $dir/functies/utilities   
 
 #----- Fancy Messages -----#
@@ -70,14 +69,14 @@ function main {
         --menu "\nWat wil je gaan doen?" \
         --cancel-button "Verlaten" \
         $LINES $COLUMNS $(( $LINES - 12 )) \
-        update          'Voer een systeem update uit' \
-        favs            'Installeer voorkeur applicaties' \
-        utilities       'Installeer voorkeur systeem hulpprogramma's' \
-        ontwikkeling    'Installeer voorkeur programmeer gereedschap' \
-        codecs          'Installeer Ubuntu beperkte Extras' \
-        derdeparty      'Installeer derde-partij software' \
-        configure       'Configureer systeem' \
-        cleanup         'Maak het systeem schoon' \
+        opwaarderen         'Voer een systeem update uit' \
+        favs                'Installeer voorkeur applicaties' \
+        hulpmiddelen        'Installeer voorkeur systeem hulpprogramma's' \
+        ontwikkeling        'Installeer voorkeur programmeer gereedschap' \
+        codecs              'Installeer Ubuntu beperkte Extras' \
+        derdeparty          'Installeer derde-partij software' \
+        configure           'Configureer systeem' \
+        cleanup             'Maak het systeem schoon' \
         3>&1 1>&2 2>&3)
      
     exitstatus=$?
