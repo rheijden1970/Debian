@@ -2,14 +2,14 @@
 
 # Perform system upgrade via apt-get
 function update {
-if (whiptail --title "Systeem Update" --yesno "Doorgaan met de systeem update?" 10 60) then
+if (whiptail --title "Opwaardering van Systeem " --yesno "Doorgaan met systeem opwaardering?" 10 60) then
     # Update repository information
-    show_info 'Updaten van repository informatie...'
+    show_info 'Opwaarderen van systeem database informatie...'
     show_warning 'Vereist root rechten'
     sudo apt-get update
     show_success 'Voltooid.'
     # Dist-Upgrade
-    show_info 'Uitvoeren van systeem update...'
+    show_info 'Uitvoeren van systeem opwaardering...'
     sudo apt-get dist-upgrade -y
     # Done
     show_success 'Voltooid.'
@@ -18,10 +18,10 @@ if (whiptail --title "Systeem Update" --yesno "Doorgaan met de systeem update?" 
     if [[ $EXITSTATUS != 0 ]]; then
         # Already up-to-date
         show_success 'Systeem is al up-to-date.'
-        whiptail --title "Voltooid" --msgbox "Systeem is up-to-date." 8 78
+        whiptail --title "Voltooid" --msgbox "Systeem is nu up-to-date." 8 78
         main
     else
-        whiptail --title "Finished" --msgbox "Systeem update voltooid" 8 78
+        whiptail --title "Finished" --msgbox "Systeem opwaardering voltooid" 8 78
         main
     fi
 else
